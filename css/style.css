@@ -39,3 +39,42 @@ h1 {
 span {
     font-size: 2rem;
 }
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--olive);
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+@media(min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    /*Va a hacer que tomen todo el espacio*/
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navegacion-principal a:hover {
+    color: var(--black);
+    background-color: var(--cream);
+}
