@@ -8,13 +8,12 @@
     --white: #fff;
     --gray: #c0c0c0;
     --grisclaro: #dfe9f3;
-
-
     /* Font size*/
     --main-fsize: 3.8rem
 }
 
-/** Globales **/
+/* G l O B A L E S */
+
 html {
     color: var(--black);
     font-size: 62.5%;
@@ -23,11 +22,11 @@ html {
     /*hack para box model*/
 }
 
+/*hack para Box-Model*/
 *,
 *:before,
 *:after {
     box-sizing: inherit;
-    /*hack para Box Model*/
 }
 
 body {
@@ -42,7 +41,7 @@ body {
     margin: 0 auto;
 }
 
-/** Iconos principales **/
+/* Iconos principales*/
 .mapa-icon {
     stroke: #47226e;
 }
@@ -51,7 +50,7 @@ body {
     stroke: var(--black);
 }
 
-/** botones **/
+/* botones */
 .boton {
     background-color: var(--boton);
     font-size: 2rem;
@@ -67,23 +66,21 @@ body {
     transition: background-color .4s;
 }
 
-@media(min-width: 780px) {
+@media(min-width: 768px) {
     .boton {
         width: auto
     }
 }
 
-.boton:hover {
-    background-color: #47226e;
+.sombra {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 7px 0px rgba(176, 176, 176, 1);
 
 }
 
-/** titulo **/
-span {
-    font-size: 2rem;
-}
-
-/** Tipografía de titulos **/
+/** TIPOGRAFÍA DE TITULOS **/
 h1 {
     font-size: 3, 8rem;
 }
@@ -102,12 +99,17 @@ h3 {
     text-align: center;
 }
 
+/* span en titulo */
+span {
+    font-size: 2rem;
+}
+
 /** parrafos **/
 p {
     font-size: 1.6rem;
 }
 
-/** navegacion principal **/
+/* N A V E G A C I O N - P R I N C I P A L*/
 .nav-bg {
     background-color: var(--primary);
 }
@@ -142,13 +144,14 @@ p {
     background-color: var(--boton);
 }
 
-/* hero */
+/* H E R O */
 .hero {
     background-image: url(../img/clouds.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 30rem;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -179,20 +182,18 @@ p {
     align-items: flex-end;
 }
 
-/* //////////////  despues del hero  ///////////////////7 */
-
-/** Panel de servicios **/
+/* S E C C I O N - S E R V I C I O S*/
 .servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 1fr 1fr 1fr*/
-    grid-column-gap: 4rem;
+    display: flex;
+    flex-direction: column;
 }
 
-@media(max-width: 760px) {
+@media(min-width: 768px) {
     .servicios {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 1fr 1fr 1fr*/
+        grid-column-gap: 4rem;
     }
 }
 
