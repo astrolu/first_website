@@ -66,6 +66,10 @@ body {
     transition: background-color .4s;
 }
 
+.boton:hover {
+    background-color: #503d61;
+}
+
 @media(min-width: 768px) {
     .boton {
         width: auto
