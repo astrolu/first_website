@@ -20,6 +20,8 @@ html {
     /* 1 rem = 10 px*/
     box-sizing: border-box;
     /*hack para box model*/
+    /* scroll-snap-type: y mandatory;
+    snap en secciones elegidas*/
 }
 
 /*hack para Box-Model*/
@@ -46,8 +48,8 @@ body {
     stroke: #47226e;
 }
 
-.iconos {
-    stroke: var(--black);
+.icono {
+    stroke: var(--white);
 }
 
 /* botones */
@@ -64,10 +66,12 @@ body {
     border-radius: 2rem;
     width: 85%;
     transition: background-color .4s;
+    border: none;
 }
 
 .boton:hover {
     background-color: #503d61;
+    cursor: pointer;
 }
 
 @media(min-width: 768px) {
@@ -110,7 +114,7 @@ span {
 
 /** parrafos **/
 p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 /* N A V E G A C I O N - P R I N C I P A L*/
@@ -186,21 +190,121 @@ p {
     align-items: flex-end;
 }
 
+/* S C R O L L - S N A P -- No me gustó
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}*/
+
 /* S E C C I O N - S E R V I C I O S*/
-.servicios {
-    display: flex;
-    flex-direction: column;
-}
+
 
 @media(min-width: 768px) {
     .servicios {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         /* 1fr 1fr 1fr*/
-        grid-column-gap: 4rem;
+        column-gap: 4rem;
     }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: #47226e;
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
 }
 
 .pie {
     text-align: right;
+}
+
+.iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* C O N T A C T O */
+.formulario {
+    background-color: #e6e6e6;
+    width: min(60rem, 100%);
+    /*utilzar el valor más pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    color: #47226e;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+@media(min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 2rem;
+    }
+}
+
+.campo:nth-child(3),
+.campo:nth-child(4) {
+    grid-column: 1/3;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: ;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid var(--black);
+    padding: 1rem;
+}
+
+textarea {
+    height: 10rem;
+}
+
+.enviar .boton {
+    width: 100%;
+}
+
+.pie {
+    text-align: center;
 }
