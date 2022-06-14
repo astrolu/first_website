@@ -93,6 +93,13 @@ h1 {
     font-size: 3, 8rem;
 }
 
+@media(max-width: 420px) {
+    .carrera::before {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
 h2 {
     font-size: 2.8rem;
 }
